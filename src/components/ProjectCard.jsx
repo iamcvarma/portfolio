@@ -1,8 +1,10 @@
 import React from "react";
 
-const ProjectCard = ({ name, url, imageUrl }) => {
+const ProjectCard = ({ name, url, imageUrl ,color,handleColor}) => {
   return (
-    <div className="min-w-full min-h-full relative overflow-clip rounded-2xl hover-shrink group cursor-pointer">
+    <div className="min-w-full min-h-full relative overflow-clip rounded-2xl hover-shrink group cursor-pointer"
+    onMouseEnter={()=>handleColor(color)}
+    >
       <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
       
       <a href={url} target="_blank" className="link">

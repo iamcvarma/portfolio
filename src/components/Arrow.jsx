@@ -1,18 +1,17 @@
 import React, { useRef, useEffect } from "react";
 
-function Arrow({dur,color}) {
+function Arrow({ dur, color,scale }) {
   const arrowRef = useRef();
 
-  useEffect(()=>{
-    setTimeout(()=>{
-      if (arrowRef) 
-      {arrowRef.current.setAttribute('stroke', color)
-    console.log(arrowRef.current)
-    console.log(color)
-    }
-
-    },dur)
-  },[color])
+  useEffect(() => {
+    setTimeout(() => {
+      if (arrowRef) {
+        arrowRef.current.setAttribute("stroke", color);
+        console.log(arrowRef.current.scale)
+        arrowRef.current.style.width = scale
+      }
+    }, dur);
+  }, [color,scale]);
 
   useEffect(() => {
     function handleMouseMove(event) {
@@ -33,8 +32,14 @@ function Arrow({dur,color}) {
   }, []);
 
   return (
-    <div className="rounded-full grid place-content-center ">
-      <svg viewBox="0 0 24 24" ref={arrowRef} width="50px" className="transition-colors duration-200 ease-in-out">
+    <div className="rounded-full grid place-content-center " 
+    >
+      <svg
+        viewBox="0 0 24 24"
+        ref={arrowRef}
+        width="50px"
+        className="transition-colors transition-stroke-width duration-200 ease-in-out"
+      >
         <path
           d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
           fill="none"
