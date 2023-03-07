@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-
+import {motion} from 'framer-motion'
 function Arrow({ dur, color,scale }) {
   const arrowRef = useRef();
 
@@ -7,7 +7,6 @@ function Arrow({ dur, color,scale }) {
     setTimeout(() => {
       if (arrowRef) {
         arrowRef.current.setAttribute("stroke", color);
-        console.log(arrowRef.current.scale)
         arrowRef.current.style.width = scale
       }
     }, dur);
@@ -34,10 +33,10 @@ function Arrow({ dur, color,scale }) {
   return (
     <div className="rounded-full grid place-content-center " 
     >
-      <svg
+      <motion.svg
         viewBox="0 0 24 24"
         ref={arrowRef}
-        width="50px"
+        width="20px"
         className="transition-colors transition-stroke-width duration-200 ease-in-out"
       >
         <path
@@ -45,7 +44,7 @@ function Arrow({ dur, color,scale }) {
           fill="none"
           strokeWidth="2"
         />
-      </svg>
+      </motion.svg>
     </div>
   );
 }

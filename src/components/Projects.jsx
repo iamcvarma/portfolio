@@ -35,7 +35,7 @@ const projectsData = [
   },
 ];
 
-const Projects = ({handleColor}) => {
+const Projects = ({handleColor,handleCursorChange}) => {
   return (
     <div className="grid project-container w-full h-full gap-2">
       {projectsData.map(({ name, url, imageUrl,color }) => (
@@ -45,6 +45,7 @@ const Projects = ({handleColor}) => {
           imageUrl={imageUrl}
           color={color}
           handleColor={handleColor}
+          handleCursorChange = {handleCursorChange}
         />
       ))}
     </div>

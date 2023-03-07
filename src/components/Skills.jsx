@@ -60,7 +60,7 @@ const icons = [
     color: "#4b4b4b",
   },
   {
-    name: "Material-UI",
+    name: "M-UI",
     icon: materialIcon,
     color: "#038ad3",
   },
@@ -125,23 +125,26 @@ const icons = [
     color: "#58b3e0",
   },
 ];
-const Skills = ({ handleColor }) => {
+const Skills = ({ handleColor, handleCursorChange }) => {
   return (
     <div className="grid grid-cols-5 gap-2">
       {icons.map(({ name, icon, color }) => (
         <div
-          className=" w-[70px] h-[70px] circle cursor-pointer"
-          onClick={() => handleColor(color)}
-          onMouseEnter={()=>handleColor(color)}
-          data-tooltip-id="tooltip"
-          data-tooltip-content={name}
-          data-tooltip-place="bottom"
-          data-tooltip-show="3000ms"
+          className=" w-[70px] h-[70px] flex flex-col items-center justify-center"
+          onMouseEnter={() => {
+            handleColor(color);
+            handleCursorChange("blurXl", (<p className="font-['Mynerve'] text-white font-md">{name}</p>));
+          }}
+          onMouseLeave={()=>handleCursorChange("default","")}
         >
-          <img src={icon} alt={name} height={30} width={30} />
+          <img
+            src={icon}
+            alt={name}
+            height={40}
+            width={40}
+          />
         </div>
       ))}
-      <Tooltip id = "tooltip" />
     </div>
   );
 };

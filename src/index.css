@@ -1,74 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+
+@font-face {
+  font-family: "Newake";
+  src: local("Newake"), local("Newake"),
+    url("assets/Newake.otf") format("opentype");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  cursor: none;
+}
 
 #root {
   height: 100%;
   width: 100%;
   padding: 1rem;
+  font-family: "Nunito Sans", "Mynerve", cursive;
 }
 
 body {
   height: 100vh;
   width: 100vw;
-  background-color: #d1d8ec;
-}
-
-.preneo {
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-  background: #d1d8ec;
-  -webkit-box-shadow: 9px 9px 24px #b2b8c9, -9px -9px 24px #f0f8ff;
-  box-shadow: 9px 9px 24px #b2b8c9;
-}
-
-.neo {
-  border-radius: 20px;
-  background-color: #d1d8ec;
-  box-shadow: 9px 9px 24px #b2b8c9, -5px -5px 15px #f0f8ff;
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-.neo:hover {
-  box-shadow: 3px 3px 7px #b2b8c9;
-}
-.hover-shrink {
-  transition: all 0.1s ease-in-out;
-}
-
-.hover-shrink:hover {
-  transform: scale(0.99);
-}
-
-.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 50%;
-  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
-    5px 5px 9px rgba(94, 104, 121, 0.3);
-}
-
-.circle:hover {
-  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.45),
-    2px 2px 5px rgba(94, 104, 121, 0.3);
-}
-
-.circle::after {
-  content: "";
-  position: absolute;
-  height: 80%;
-  width: 80%;
-  background-color: transparent;
-  border-radius: 50%;
-  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
-    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
-}
-
-.circle::after:hover {
-  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.45),
-    inset 2px 2px 5px rgba(94, 104, 121, 0.3);
+  background-color: #0d1821;
+  opacity: 1;
+  background-color: #0d1821;
+  opacity: 1;
+  background-image: radial-gradient(#f4ecd6 2px, transparent 2px),
+    radial-gradient(#f4ecd6 2px, #0d1821 2px);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
 }
 
 .project-container {
@@ -93,4 +58,34 @@ body {
 .transition-stroke-width {
   transition-property: width;
   transition-duration: 100ms;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #504bec;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #504bec;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.specialLink {
+  font-size: medium;
+  font-weight: 600;
+  color: #143db8;
 }
