@@ -20,7 +20,10 @@ const Cursor = ({ cursorVarient, innerComp}) => {
       y: mousePos.y - 30,
       width: "30px",
       height: "30px",
-      "background-color": "#22222",
+      "background-color": "#ce5f5f",
+      transition:{
+        duration:0
+      }
     },
     blur: {
       x: mousePos.x - 40,
@@ -35,15 +38,25 @@ const Cursor = ({ cursorVarient, innerComp}) => {
       width: "70px",
       height: "70px",
       "backdrop-filter": "blur(5px)",
+      transition:{
+        duration:0.01
+      }
     },
     invert: {
       x: mousePos.x - 50,
       y: mousePos.y - 50,
       width: "70px",
       height: "70px",
-      "background-color": "#0678a2",
-      "mix-blend-mode": "luminosity",
+      "background-color": "#07419f",
+      "mix-blend-mode": "exclusion",
     },
+    blurLogoXl: {
+      x: mousePos.x - 50,
+      y: mousePos.y - 50,
+      width: "70px",
+      height: "70px",
+      "backdrop-filter": "blur(5px)",
+    }
   };
   return (
     <motion.div

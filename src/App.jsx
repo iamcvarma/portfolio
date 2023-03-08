@@ -35,15 +35,15 @@ function App() {
   }
   return (
     <div className="w-full h-full grid grid-rows-4 grid-cols-6 gap-4">
-      <div className="row-start-1 row-end-3 col-start-1 col-end-3 p-2 hover:scale-[.98] transition-all ">
+      <div className="row-start-1 row-end-3 col-start-1 col-end-3 p-2  blur-container ">
         <ArrowWrapper>
-          <About />
+          <About handleCursorChange={handleCursorChange}/>
         </ArrowWrapper>
       </div>
       <div className="row-start-1 row-end-3 col-start-3 col-end-5">
         <FancyArrow color={arrowColor} scale={arrowScale} />
       </div>
-      <div className="row-start-1 col-start-5 row-end-5 col-end-7  bg-[#B6B6B6]  p-2 hover:scale-[.98] transition-all">
+      <div className="row-start-1 col-start-5 row-end-5 col-end-7  blur-container   p-2l">
         <ArrowWrapper>
           <Experience handleCursorChange={handleCursorChange} />
         </ArrowWrapper>

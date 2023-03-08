@@ -6,7 +6,7 @@ const ProjectCard = ({ name, url, imageUrl, color, handleColor,handleCursorChang
     onMouseEnter={()=>handleCursorChange("blur",(<p className="text-white">VIEW</p>))}
     onMouseLeave={()=>handleCursorChange("default","")}
     >
-      <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
+      <img src={imageUrl} alt={name} className="w-full h-full object-cover "/>
 
       <a href={url} target="_blank" className="link">
       <div

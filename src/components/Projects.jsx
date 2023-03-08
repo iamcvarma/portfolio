@@ -48,6 +48,20 @@ const Projects = ({handleColor,handleCursorChange}) => {
           handleCursorChange = {handleCursorChange}
         />
       ))}
+      <div className="flex flex-col justify-center items-center ">
+        <div 
+        className="flex justify-start w-full ml-1"
+        > 
+        <h1 className="text-white font-extralight text-3xl text-left">Selected</h1>
+
+        </div>
+        <div>
+        <h1
+        className="text-white text-5xl -mt-2 font-extrabold font-[Nunito Sans] italic"
+        >projects</h1>
+
+        </div>
+      </div>
     </div>
   );
 };

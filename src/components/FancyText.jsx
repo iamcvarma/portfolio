@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#$%&?!';
+const letters = 'abcdefghijklmnopqrstuvwxyz@#?!';
 
 function FancyText({ text }) {
   const [displayText, setDisplayText] = useState(text);
@@ -28,7 +28,7 @@ function FancyText({ text }) {
     return () => clearInterval(interval);
   }, [text]);
 
-  return <h1 className="text-4xl font-[Newake] text-white">{displayText}</h1>;
+  return <h1 className="font-[Be Vietnam Pro] text-slate-500">{displayText}</h1>;
 }
 
 export default FancyText;
