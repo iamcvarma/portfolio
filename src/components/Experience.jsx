@@ -32,7 +32,7 @@ const Experience = ({ handleCursorChange }) => {
         <div className="text-sm">
           <div className="flex p-1 ml-2 ">
             <div className="flex justify-center items-start p-3">
-              <div className="w-[5px] h-[5px] bg-black "></div>
+              <div className="w-[5px] h-[5px] bg-red-700 "></div>
             </div>
             <p>
               Contributed to Amazon's Product Recommendations Engine, that
@@ -50,7 +50,7 @@ const Experience = ({ handleCursorChange }) => {
           </div>
           <div className="flex p-1 ml-2 ">
             <div className="flex justify-center items-start p-3">
-              <div className="w-[5px] h-[5px] bg-black "></div>
+              <div className="w-[5px] h-[5px] bg-red-700 "></div>
             </div>
             <p>
               Improved Amazon's search results by Fine-tuning context-based
@@ -71,7 +71,7 @@ const Experience = ({ handleCursorChange }) => {
           </div>
           <div className="flex p-1 ml-2 ">
             <div className="flex justify-center items-start p-3">
-              <div className="w-[5px] h-[5px] bg-black"></div>
+              <div className="w-[5px] h-[5px] bg-red-700"></div>
             </div>
             <p>
               Transformed user data to train ML models,
@@ -88,7 +88,7 @@ const Experience = ({ handleCursorChange }) => {
           </div>
           <div className="flex p-1 ml-2 ">
             <div className="flex justify-center items-start p-3">
-              <div className="w-[5px] h-[5px] bg-black"></div>
+              <div className="w-[5px] h-[5px] bg-red-700"></div>
             </div>
             <p>
               Contributed to ML models that enhanced Amazon's targeted ads,
@@ -132,7 +132,7 @@ const Experience = ({ handleCursorChange }) => {
         <div className="text-sm">
           <div className="flex p-1 ml-2 ">
             <div className="flex justify-center items-start p-3">
-              <div className="w-[5px] h-[5px] bg-black circle"></div>
+              <div className="w-[5px] h-[5px] bg-red-700 circle"></div>
             </div>
             <p>
               Helped train Bing Maps' Turing Image Super Resolution, used by{" "}
@@ -152,7 +152,7 @@ const Experience = ({ handleCursorChange }) => {
           </div>
           <div className="flex p-1 ml-2 ">
             <div className="flex justify-center items-start p-3">
-              <div className="w-[5px] h-[5px] bg-black circle"></div>
+              <div className="w-[5px] h-[5px] bg-red-700 circle"></div>
             </div>
             <p>
               Fine-tuned Bing Image Search's Image Aesthetic ML model, boosting{" "}
@@ -172,7 +172,7 @@ const Experience = ({ handleCursorChange }) => {
           </div>
           <div className="flex p-1 ml-2 ">
             <div className="flex justify-center items-start p-3">
-              <div className="w-[5px] h-[5px] bg-black circle"></div>
+              <div className="w-[5px] h-[5px] bg-red-700 circle"></div>
             </div>
             <p>
               Trained ML models for Nordstrom's fashion ads, increasing
@@ -190,7 +190,7 @@ const Experience = ({ handleCursorChange }) => {
           </div>
           <div className="flex p-1 ml-2 ">
             <div className="flex justify-center items-start p-3">
-              <div className="w-[5px] h-[5px] bg-black circle"></div>
+              <div className="w-[5px] h-[5px] bg-red-700 circle"></div>
             </div>
             <p>
               Refined data for
@@ -207,7 +207,7 @@ const Experience = ({ handleCursorChange }) => {
           </div>
         </div>
       </div>
-        <Socials handleCursorChange={handleCursorChange} />
+        
     </div>
   );
 };

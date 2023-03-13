@@ -127,10 +127,12 @@ const icons = [
 ];
 const Skills = ({ handleColor, handleCursorChange }) => {
   return (
-    <div className="grid grid-cols-5 gap-2">
+    <div>
+
+    <div className="grid grid-cols-5">
       {icons.map(({ name, icon, color }) => (
         <div
-          className=" w-[70px] h-[70px] flex flex-col items-center justify-center"
+          className=" w-full flex flex-col items-center justify-center"
           onMouseEnter={() => {
             handleColor(color);
             handleCursorChange("blurXl", (<p className="font-['Mynerve'] text-white font-md">{name}</p>));
@@ -142,9 +144,14 @@ const Skills = ({ handleColor, handleCursorChange }) => {
             alt={name}
             height={40}
             width={40}
+            className="m-3"
           />
         </div>
       ))}
+    </div>
+    <h1
+        className="text-white text-5xl text-center font-extrabold font-[Nunito Sans] italic"
+        >skills</h1>
     </div>
   );
 };

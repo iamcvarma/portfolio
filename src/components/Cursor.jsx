@@ -47,7 +47,7 @@ const Cursor = ({ cursorVarient, innerComp}) => {
       y: mousePos.y - 50,
       width: "70px",
       height: "70px",
-      "background-color": "#07419f",
+      "background-color": "#001d47",
       "mix-blend-mode": "exclusion",
     },
     blurLogoXl: {

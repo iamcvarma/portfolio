@@ -37,15 +37,15 @@ const social = [
 
 const Socials = ({handleCursorChange}) => {
   return (
-    <div className=" flex flex-row justify-evenly  py-4  blur-container ">
+    <div className=" flex flex-col justify-evenly ">
       {social.map(({ name, url, icon, iconColor }) => (
         <div
         onMouseEnter={()=>handleCursorChange("blurLogoXl",(<img src={iconColor} width={45} height={45}/>))}
         onMouseLeave={()=>handleCursorChange("default")}
         >
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" className="inline-block m-2">
 
-          <img src={icon} alt={name} width={30} height={30} />
+          <img src={icon} alt={name} width={18} height={18} />
             </a>
         </div>
       ))}

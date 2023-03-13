@@ -33,7 +33,7 @@ function Arrow({ dur, color,scale }) {
   return (
     <div className="rounded-full grid place-content-center " 
     >
-      <motion.svg
+      <svg
         viewBox="0 0 24 24"
         ref={arrowRef}
         width="20px"
@@ -44,7 +44,7 @@ function Arrow({ dur, color,scale }) {
           fill="none"
           strokeWidth="2"
         />
-      </motion.svg>
+      </svg>
     </div>
   );
 }
