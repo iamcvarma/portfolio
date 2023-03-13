@@ -1,6 +1,7 @@
 import React from "react";
 import Info from "./Info";
 import Socials from "./Socials";
+import photo from '../assets/images/photo.png'
 const About = ({ handleCursorChange }) => {
   return (
     <div className="w-full h-full p-5  relative flex flex-col justify-between">
@@ -28,7 +29,7 @@ const About = ({ handleCursorChange }) => {
         </div>
         <div className="absolute right-0 top-0 -z-10 flex justify-end">
           <img
-            src="src/assets/images/photo.png"
+            src={photo}
             alt="Chaitanya"
             className="w-[20%] rounded-full "
           />

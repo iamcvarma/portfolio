@@ -1,36 +1,40 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-
+import bubble from '../assets/images/bubblewrap.jpg'
+import netflix from '../assets/images/netflix.jpg'
+import vine from '../assets/images/vine.jpg'
+import changelog from '../assets/images/changelog.jpg'
+import copyai from '../assets/images/copyai.jpg'
 const projectsData = [
   {
     name: "Bubble Wrap",
     url: "https://mern-social-media-fullstack-app.vercel.app/",
-    imageUrl: "/src/assets/images/bubblewrap.jpg",
+    imageUrl: bubble,
     color:"#0038a8"
   },
   {
     name: "Netflix",
     url: "https://netflix-iamcvarma.vercel.app/",
-    imageUrl: "/src/assets/images/netflix.jpg",
+    imageUrl: netflix,
     color:"#e10000"
   },
   {
     name: "Vine",
     url: "https://vine-iamcvarma.vercel.app/",
-    imageUrl: "/src/assets/images/vine.jpg",
+    imageUrl: vine,
     accent:"cyan",
     color:"#f90788"
   },
   {
     name: "Change Log",
     url: "https://changelog-api-server.onrender.com/",
-    imageUrl: "/src/assets/images/changelog.jpg",
+    imageUrl:changelog,
     color:"#81a7f3"
   },
   {
     name: "Copy.ai",
     url: "https://open-ai-snippets.vercel.app/",
-    imageUrl: "/src/assets/images/copyai.jpg",
+    imageUrl: copyai,
     color:"#0a9893"
   },
 ];
