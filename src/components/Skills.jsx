@@ -129,7 +129,7 @@ const Skills = ({ handleColor, handleCursorChange }) => {
   return (
     <div>
 
-    <div className="grid grid-cols-5">
+    <div className="grid grid-cols-4 w-full h-full">
       {icons.map(({ name, icon, color }) => (
         <div
           className=" w-full flex flex-col items-center justify-center"
@@ -149,9 +149,6 @@ const Skills = ({ handleColor, handleCursorChange }) => {
         </div>
       ))}
     </div>
-    <h1
-        className="text-white text-5xl text-center font-extrabold font-[Nunito Sans] italic"
-        >skills</h1>
     </div>
   );
 };

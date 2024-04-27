@@ -24,7 +24,7 @@ const About = ({ handleCursorChange }) => {
         {/* <Info /> */}
         <div>
           <p className="text-slate-400 from-inherit">
-          I'm an aspiring software developer with 2 years of experience in data analytics at top tech companies such as Amazon and Microsoft. Passionate about leveraging my technical skills to create innovative solutions and drive business growth.
+          Results-driven technology professional with a passion for optimizing system performance and ensuring data integrity. Proven track record of delivering significant improvements through innovative solutions and strategic problem-solving. Expertise in microservices, concurrency, and data modeling drives my success in fast-paced environments.
           </p>
         </div>
         <div className="absolute right-0 top-0 -z-10 flex justify-end">

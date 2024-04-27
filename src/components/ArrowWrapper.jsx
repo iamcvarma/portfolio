@@ -1,6 +1,6 @@
 const ArrowWrapper = ({ children }) => {
   return (
-    <div className="relative w-full h-full group  ">
+    <div className="relative w-full h-full group  overflow-auto scroll scr">
       <div className="absolute top-0 left-0 group-hover:top-1 group-hover:left-1 transition-all duration-200">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -8,10 +8,11 @@ import ArrowWrapper from "./components/ArrowWrapper";
 import Cursor from "./components/Cursor";
 import About from "./components/About";
 const defaultColor = "#b2b8c9";
-const defaultScale = "50px";
+const defaultScale = "14px";
 function App() {
   const [arrowColor, setArrowColor] = useState(defaultColor);
   const [arrowScale, setArrowScale] = useState(defaultScale);
+  const [idle,setIdle] = useState(true)
   const [cursorVarient, setCursorVarient] = useState({
     cursorVarient: "default",
     innerComp: "",
@@ -20,6 +21,7 @@ function App() {
     const timeOut = setTimeout(() => {
       setArrowColor(defaultColor);
       setArrowScale(defaultScale);
+      setIdle(true)
     }, 300);
 
     return () => {
@@ -27,8 +29,10 @@ function App() {
     };
   }, [arrowColor, arrowScale]);
   const handleClick = (color) => {
+    if (!idle) return
+    setIdle(false)
     setArrowColor(color);
-    setArrowScale("54px");
+    setArrowScale("11px")
   };
   const handleCursorChange = (varient, comp) =>{
     setCursorVarient({ cursorVarient: varient, innerComp:comp });
@@ -40,26 +44,28 @@ function App() {
           <About handleCursorChange={handleCursorChange}/>
         </ArrowWrapper>
       </div>
-      <div className="row-start-1 row-end-3 col-start-3 col-end-5">
-        <FancyArrow color={arrowColor} scale={arrowScale} />
+      <div className="absolute -z-10 w-full h-full ">
+        <FancyArrow color={arrowColor} scale={defaultScale} />
       </div>
       <div className="row-start-1 col-start-5 row-end-5 col-end-7  blur-container   p-2l">
         <ArrowWrapper>
           <Experience handleCursorChange={handleCursorChange} />
         </ArrowWrapper>
       </div>
-      <div className="row-start-3 col-start-3 row-end-5 col-end-5">
+      <div className="row-start-1 col-start-3 row-end-3 col-end-5 blur-container">
+        <ArrowWrapper>
         <Skills
           handleColor={handleClick}
           handleCursorChange={handleCursorChange}
         />
+        </ArrowWrapper>
       </div>
-      <div className="row-start-3 col-start-1 row-end-5 col-end-3 ">
+      <div className="row-start-3 col-start-1 row-end-5 col-end-5">
         <Projects
-          handleColor={() => {}}
+          handleColor={handleClick}
           handleCursorChange={handleCursorChange}
         />
-      </div>
+      </div>  
       <Cursor
         cursorVarient={cursorVarient.cursorVarient}
         innerComp={cursorVarient.innerComp}

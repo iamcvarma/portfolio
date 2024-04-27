@@ -3,7 +3,6 @@ import { motion, useWillChange } from "framer-motion";
 const Cursor = ({ cursorVarient, innerComp}) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const willChange = useWillChange();
-  console.log(innerComp)
   useEffect(() => {
     const mouseMoveHandler = (event) => {
       setMousePos({ x: event.clientX, y: event.clientY });

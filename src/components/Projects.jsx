@@ -3,17 +3,17 @@ import ProjectCard from "./ProjectCard";
 import bubble from '../assets/images/bubblewrap.jpg'
 import netflix from '../assets/images/netflix.jpg'
 import vine from '../assets/images/vine.jpg'
-import changelog from '../assets/images/changelog.jpg'
+import logVault from '../assets/images/logVault.jpg'
 import copyai from '../assets/images/copyai.jpg'
 const projectsData = [
   {
-    name: "Bubble Wrap",
+    name: "BubbleWrap",
     url: "https://mern-social-media-fullstack-app.vercel.app/",
     imageUrl: bubble,
     color:"#0038a8"
   },
   {
-    name: "Netflix",
+    name: "Cinematica",
     url: "https://netflix-iamcvarma.vercel.app/",
     imageUrl: netflix,
     color:"#e10000"
@@ -26,22 +26,16 @@ const projectsData = [
     color:"#f90788"
   },
   {
-    name: "Change Log",
+    name: "LogVault",
     url: "https://changelog-api-server.onrender.com/",
-    imageUrl:changelog,
+    imageUrl:logVault,
     color:"#81a7f3"
-  },
-  {
-    name: "Copy.ai",
-    url: "https://open-ai-snippets.vercel.app/",
-    imageUrl: copyai,
-    color:"#0a9893"
-  },
+  }
 ];
 
 const Projects = ({handleColor,handleCursorChange}) => {
   return (
-    <div className="grid project-container w-full h-full gap-2">
+    <div className="grid project-container w-full h-full gap-4">
       {projectsData.map(({ name, url, imageUrl,color }) => (
         <ProjectCard
           name={name}
@@ -52,7 +46,7 @@ const Projects = ({handleColor,handleCursorChange}) => {
           handleCursorChange = {handleCursorChange}
         />
       ))}
-      <div className="flex flex-col justify-center items-center ">
+      {/* <div className="flex flex-col justify-center items-center ">
         <div 
         className="flex justify-start w-full ml-1"
         > 
@@ -65,7 +59,7 @@ const Projects = ({handleColor,handleCursorChange}) => {
         >projects</h1>
 
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
